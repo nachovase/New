@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> Sigue la bola con Elmo </title>
+</head>
+
+<div class=" CmpGameModal modal" data-type="game" aria-hidden="true" style="display: block;" data-meta="{&quot;region&quot;:&quot;default&quot;,&quot;weight&quot;:12,&quot;override_label&quot;:&quot;&quot;,&quot;override_image&quot;:{&quot;uuid&quot;:null},&quot;content&quot;:{&quot;uuid&quot;:&quot;bd5874e8-fb22-430c-af19-983266853e4d&quot;,&quot;data&quot;:{&quot;bundle&quot;:&quot;game&quot;,&quot;keywords&quot;:[&quot;juegos&quot;,&quot; monstruos en red&quot;,&quot; tecnologia&quot;,&quot; patrones&quot;,&quot; secuencias &quot;],&quot;taxonomy_terms&quot;:{&quot;age&quot;:[3,4,5,6,7],&quot;lang&quot;:&quot;es&quot;,&quot;areasOfLearning&quot;:[&quot;Medios y nuevas tecnologías&quot;],&quot;audience&quot;:[&quot;Niños&quot;],&quot;thumbnail&quot;:&quot;https://cms.sesamo.com/files/s3fs-public/2020-05/juegos_elmo-sigue-la-bola_img.jpg&quot;,&quot;character&quot;:[&quot;Elmo&quot;],&quot;business&quot;:[],&quot;description&quot;:&quot;<p><span style=\&quot;font-size:11pt; font-variant:normal; white-space:pre-wrap\&quot;><span style=\&quot;font-family:Calibri,sans-serif\&quot;><span style=\&quot;color:#000000\&quot;><span style=\&quot;background-color:#ffffff\&quot;><span style=\&quot;font-weight:400\&quot;><span style=\&quot;font-style:normal\&quot;><span style=\&quot;text-decoration:none\&quot;>Prepárate para seguir la bola. Elmo va a esconder una bola debajo de una taza. Mira la taza con cuidado mientras se mueve! </span></span></span></span></span></span></span></p>\r\n&quot;},&quot;meta_json&quot;:{&quot;type&quot;:&quot;game&quot;,&quot;isVideoRemote&quot;:false,&quot;preview_image&quot;:&quot;https://cms.sesamo.com/files/s3fs-public/2020-05/juegos_elmo-sigue-la-bola_img.jpg&quot;,&quot;preview_image_alt&quot;:&quot;juegos_elmo-sigue-la-bola_img&quot;,&quot;url&quot;:&quot;https://cdn.sesamedigital.net/stg-games.sesamo.com/67_sigue-tu-bola/index.html&quot;,&quot;filemime&quot;:null,&quot;title&quot;:&quot;Elmo en la feria: Sigue la bola&quot;,&quot;description&quot;:&quot;<p><span style=\&quot;font-size:11pt; font-variant:normal; white-space:pre-wrap\&quot;><span style=\&quot;font-family:Calibri,sans-serif\&quot;><span style=\&quot;color:#000000\&quot;><span style=\&quot;background-color:#ffffff\&quot;><span style=\&quot;font-weight:400\&quot;><span style=\&quot;font-style:normal\&quot;><span style=\&quot;text-decoration:none\&quot;>Prepárate para seguir la bola. Elmo va a esconder una bola debajo de una taza. Mira la taza con cuidado mientras se mueve! </span></span></span></span></span></span></span></p>\r\n&quot;,&quot;subs&quot;:null,&quot;isDownloadable&quot;:null,&quot;fieldResourceVersion&quot;:null,&quot;posterUri&quot;:null,&quot;interactiveFileId&quot;:&quot;67_sigue-tu-bola&quot;,&quot;slug&quot;:null,&quot;videoLength&quot;:null,&quot;imageFilemime&quot;:&quot;image/jpeg&quot;,&quot;notDownloadableAct&quot;:null}}},&quot;countries&quot;:[],&quot;type&quot;:&quot;game&quot;,&quot;context&quot;:&quot;tile&quot;}"><iframe height="100%" src="https://cdn.sesamedigital.net/stg-games.sesamo.com/67_sigue-tu-bola/index.html"></iframe></div>
+<body style="background-color: rgb(0, 0, 0); padding: 0px; border-width: 0px; border-style: initial; border-color: initial; margin: 0px;">   
+    <div id="Cocos2dGameContainer" style="width: 359px; height: 230px; margin: 144px 0px; position: relative; overflow: hidden;"><canvas id="gameCanvas" width="359" height="230" class="gameCanvas" tabindex="99" style="background-color: transparent; outline: none; width: 359px; height: 230px; cursor: none;"></canvas></div>
+  <script type="text/javascript">
+        window.onload = function() {
+            cc.game.onStart = function() {
+                G.setMainSys();
+                if(G.isiOS()) {
+                    G.setGain();
+                }
+                G.setVisibilityChange();
+                cc.view.enableRetina(false);
+                cc.view.adjustViewPort(true);
+                cc.view.setDesignResolutionSize(977,628,cc.ResolutionPolicy.SHOW_ALL);
+                cc.view.resizeWithBrowserSize(true);
+                cc.director.setProjection(cc.Director.PROJECTION_2D);
+                var reloadRes = null;
+                if(G.useMainSoundRes === true) {
+                    reloadRes = res_home_main;
+                } else {
+                    reloadRes = res_home_other;
+                }
+                leisloader.preload(reloadRes, function () {
+                    cc.director.runScene(HomeLayer.scene());
+                }, this);
+            };
+            cc.game.run();
+        };
+        function getIEVersion() {
+          var myNav = navigator.userAgent.toLowerCase();
+          return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+        }
+        if(getIEVersion() == 9) {
+            document.write("<script src=\"cocos2d-js-v3.8-lite.min.js\"><\/script>");
+        } else {
+            document.write("<script src=\"cocos2d-js-v3.8-lite-fix.min.js\"><\/script>");
+        }
+  </script><script src="cocos2d-js-v3.8-lite-fix.min.js"></script><div style="font-family: Arial; position: absolute; left: -100px; top: -100px; line-height: normal;"></div>
+
+</body>
+</html>
