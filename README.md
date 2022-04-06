@@ -1,1 +1,3 @@
-# New
+- Hello , i am @nachovase
+- I'm programming JavaScript to code HTML.
+- Get fun!
